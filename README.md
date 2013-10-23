@@ -1,4 +1,4 @@
-= Arduino LED controller library =
+# Arduino LED controller library
 This is a simple library for easy and flexible controlling/creating of LEDs light sequences on the ATMega 328 (Arduino) microcontroller.
 
 So far it's just working with the internal PWM outputs on the ATMEGA328, but I'm planning on extending it to work with the TLC5940 PWM controller
@@ -9,13 +9,13 @@ Some demos:
 * [VU-meter](https://www.youtube.com/watch?v=IwiZFkM0mhY)
 * [Two-color crossfade](https://www.youtube.com/watch?v=AOxNgVRFAr4)
 
-= Installation =
+# Installation
 
 Create a directory called `LEDTicker` in your Libraries-folder. Download and unzip the .cpp and .h files in this directory.
 
 You should now be able to include 'ledticker.h' in your application.
 
-= Usage =
+# Usage
 The basic way of working with the library is to send a list of LED commands via the `runList` method. A LED command consists of the following:
   * LED number (not same as pin number)
   * LED Action (Fade up/down, on/off)
@@ -27,9 +27,9 @@ When the list has finished a user defined function will be called if it has been
 
 A new list of commands can be sent before the current list has finished. The old list will then be discarded.
 
-= Reference=
+# Reference
 
-==Interfaces==
+## Interfaces
 Basically there are three public interfaces:
 ```
 /*
@@ -49,7 +49,7 @@ void LEDTckr::runList(LEDCommandSet_t* cl);
 void LEDTckr::registerCallback(void (*CBFunc)());
 ```
 
-==Data types==
+## Data types
 
 ```
 
@@ -109,7 +109,7 @@ typedef struct {
 
 ```
 
-= Example code =
+# Example code
 ```
 /*
  * Example usage of the LED Ticker libarary
