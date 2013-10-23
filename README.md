@@ -1,5 +1,5 @@
 # Arduino LED controller library
-This is a simple library for easy and flexible controlling/creating of LEDs light sequences on the ATMega 328 (Arduino) microcontroller.
+This is a simple library for controlling/creating LEDs light sequences on the ATMega 328 (Arduino) microcontroller.
 
 So far it's just working with the internal PWM outputs on the ATMEGA328, but I'm planning on extending it to work with the TLC5940 PWM controller
 
@@ -31,7 +31,7 @@ A new list of commands can be sent before the current list has finished. The old
 
 ## Interfaces
 Basically there are three public interfaces:
-```
+```c
 /*
  * Advances LED actions/commands. Could be called from main loop or
  * from a timer ISR
@@ -51,8 +51,7 @@ void LEDTckr::registerCallback(void (*CBFunc)());
 
 ## Data types
 
-```
-
+```c
 /*
  * LED Behaviours
  */
@@ -110,7 +109,7 @@ typedef struct {
 ```
 
 # Example code
-```
+```c
 /*
  * Example usage of the LED Ticker libarary
  */
